@@ -66,7 +66,7 @@ object EventPollOverlay {
     }
 
     private fun optionEmptyColor(opacity: Double) = ColorHelper.Argb.getArgb((120 * opacity).toInt(), 20, 20, 25)
-    private fun optionFilledColor(opacity: Double) = ColorHelper.Argb.getArgb((160 * opacity).toInt(), 255, 93, 0)
+    private fun optionFilledColor(opacity: Double) = ColorHelper.Argb.getArgb((160 * opacity).toInt(), 242, 137, 137)
 
     private fun EventManager.renderPollChoice(stack: MatrixStack, choices: List<Event>, opacity: Double) = choices.forEachIndexed { index, choice ->
         val ratio = 0.0.takeIf { votes.isEmpty() } ?: (votes.count { it.value == index } / votes.size.toDouble())
