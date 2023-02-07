@@ -20,6 +20,7 @@ import kotlin.math.ceil
 import kotlin.math.roundToInt
 
 object EventPollOverlay {
+    private const val voteTime = 60
     private const val eventPollMargin = 10
 
     private val client = MinecraftClient.getInstance()
@@ -38,7 +39,7 @@ object EventPollOverlay {
 
         manager.currentPoll?.let { poll ->
             val opacity = when (manager.remainingPollTime) {
-                in ((20 * 20 - 10)..(20 * 20)) -> -((manager.remainingPollTime / 10.0) - 40)
+                in ((voteTime * 20 - 10)..(voteTime * 20)) -> -((manager.remainingPollTime / 10.0) - 40)
                 else -> 1.0
             }.coerceAtLeast(0.025)
 

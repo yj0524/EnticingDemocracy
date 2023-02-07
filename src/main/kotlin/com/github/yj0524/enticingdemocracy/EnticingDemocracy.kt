@@ -19,6 +19,7 @@ import org.slf4j.LoggerFactory
 import kotlin.random.Random.Default.nextInt
 
 object EnticingDemocracy : ModInitializer {
+    private const val voteTime = 60
 
     var manager: EventManager? = null
     val logger = LoggerFactory.getLogger("enticing_democracy")
@@ -108,7 +109,7 @@ object EnticingDemocracy : ModInitializer {
                         val choices = Event.totalEvents[EventEffectType.values().random()]!!.filter { event ->
                             event !in appliedTemporaryEvents && event !in appliedPermanentEvents
                         }.shuffled().take(3)
-                        remainingPollTime = 20 * 20
+                        remainingPollTime = voteTime * 20
                         currentPoll = EventPoll(choices)
 
                         it.playerManager.playerList.forEach { player ->
