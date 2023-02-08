@@ -28,7 +28,7 @@
 해당 프로젝트는 GNU 일반 공중 사용 허가서를 이용하고 있습니다.
 
 ## Original Source
-[dytroc - EnticingDemocracy](https://github.com/dytroc/enticing-democracy
+[dytroc - EnticingDemocracy](https://github.com/dytroc/enticing-democracy)
 
 [^1]: 정확히는 트위치 채널 아이디입니다. 만약에 한글, 한자, 가나와 같이 로마자가 아닌 문자가 들어가있을 경우, 아이디가 아닐 겁니다.
 [^2]: 이렇게 생성된 토큰은 60일 동안 유효합니다.
